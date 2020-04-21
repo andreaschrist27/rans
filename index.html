@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <style>
+   [v-cloak] > * { display:none; }
+   [v-cloak]::before { 
+     content: " ";
+     display: block;
+     width: 16px;
+     height: 16px;
+     background-image: url('data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==');
+   }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <v-app v-cloak>
+      <v-content  class="grey lighten-5">
+        <v-container>
+       <v-row no-gutters>
+        <v-col
+         md="10"
+         offset-md="1"
+        >
+        
+         <v-alert
+           border="top"
+           colored-border
+           type="info"
+           elevation="2"
+         >
+         Domain ini dijual 
+         <v-btn rounded small  color="primary" dark 
+         href="https://api.whatsapp.com/send?phone=+6281351281352&text=Hallo bg, mau nanya seputar domain rans.id" 
+          target="_blank">
+          <v-icon>mdi-whatsapp</v-icon>
+          Hubungi kami
+         </v-btn>
+         </v-alert>
+         
+       <v-expansion-panels popout>
+         <v-expansion-panel
+         v-for="(explanation,index) in explanations"
+         :key="i"
+         >
+         <v-expansion-panel-header>{{index+1}}. {{explanation.header}}</v-expansion-panel-header>
+         <v-expansion-panel-content>
+           {{explanation.content}}
+         </v-expansion-panel-content>
+        </v-expansion-panel>
+       </v-expansion-panels>
+       </v-col>
+       </v-row>
+       </v-container>
+      </v-content>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data : {
+       explanations : [
+        {
+         header: 'Apa itu RANS ?',
+         content: 'RANS merupakan salah satu brand terbesar di indonesia, rans sendiri merupakan singkatan dari Raffi Ahmad dan Nagita Slavina',
+        }
+       ]
+      }
+    })
+  </script>
+</body>
+</html>
