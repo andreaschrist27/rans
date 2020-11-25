@@ -42,17 +42,6 @@
          </v-btn>
          </v-alert>
          
-       <v-expansion-panels popout>
-         <v-expansion-panel
-         v-for="(explanation,index) in explanations"
-         :key="i"
-         >
-         <v-expansion-panel-header>{{index+1}}. {{explanation.header}}</v-expansion-panel-header>
-         <v-expansion-panel-content>
-           {{explanation.content}}
-         </v-expansion-panel-content>
-        </v-expansion-panel>
-       </v-expansion-panels>
        </v-col>
        </v-row>
        </v-container>
@@ -67,12 +56,7 @@
       el: '#app',
       vuetify: new Vuetify(),
       data : {
-       explanations : [
-        {
-         header: 'Apa itu RANS ?',
-         content: 'RANS merupakan salah satu brand terbesar di indonesia, rans sendiri merupakan singkatan dari Raffi Ahmad dan Nagita Slavina',
-        }
-       ]
+       explanations : []
       }
     })
   </script>
